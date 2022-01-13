@@ -27,6 +27,8 @@ class Checkout
         else
           total += (prices.fetch(item) / 2) * count
         end
+      elsif item == :mango
+        total += prices.fetch(item) * (count - (count / 4).floor)
       else
         total += prices.fetch(item) * count
       end
