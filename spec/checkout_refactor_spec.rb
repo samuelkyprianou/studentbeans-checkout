@@ -90,7 +90,7 @@ RSpec.describe Checkout_refactor do
 
     context "when a half price offer applies on pineapples restricted to 1 per customer" do
       before do
-        percentage.add_percentage_discount(:pineapple, 50) 
+        percentage.add_percentage_discount(:pineapple, 50, 1) 
         checkout.scan(:pineapple)
         checkout.scan(:pineapple)
       end
